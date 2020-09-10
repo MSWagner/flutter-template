@@ -9,7 +9,9 @@ import Flutter
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
     if #available(iOS 10.0, *) {
-        LoggerPlugin.register(with: self.registrar(forPlugin: "LoggerPlugin"))
+        if let registrar = self.registrar(forPlugin: "LoggerPlugin") {
+            LoggerPlugin.register(with: registrar)
+        }
     }
     
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)

@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/model/exceptions/network_error.dart';
+import 'package:flutter_template/models/exceptions/network_error.dart';
 import 'package:flutter_template/util/env/flavor_config.dart';
 
 class FlutterTemplateLogger {

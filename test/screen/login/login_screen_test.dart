@@ -1,7 +1,7 @@
-import 'package:flutter_template/screen/login/login_screen.dart';
+import 'package:flutter_template/features/login/screens/login_screen.dart';
 import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/viewmodel/login/login_viewmodel.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_button.dart';
+import 'package:flutter_template/features/login/viewmodels/login_viewmodel.dart';
+import 'package:flutter_template/common/widgets/styled/flutter_template_button.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

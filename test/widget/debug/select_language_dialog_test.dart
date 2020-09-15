@@ -1,6 +1,6 @@
 import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
-import 'package:flutter_template/widget/debug/select_language_dialog.dart';
+import 'package:flutter_template/common/viewmodels/global_viewmodel.dart';
+import 'package:flutter_template/features/debug/widgets/select_language_dialog.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

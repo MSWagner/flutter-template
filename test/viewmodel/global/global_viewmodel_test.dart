@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/repository/debug/debug_repo.dart';
-import 'package:flutter_template/repository/locale/locale_repo.dart';
+import 'package:flutter_template/features/debug/repositories/debug_repo.dart';
+import 'package:flutter_template/repositories/locale/locale_repo.dart';
 import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
+import 'package:flutter_template/common/viewmodels/global_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -15,12 +15,12 @@ import '../../util/test_extensions.dart';
 void main() {
   GlobalViewModel sut;
   MockLocaleRepoitory localeRepo;
-  MockDebugRepository debugRepo;
+  MockDebugrepositories debugRepo;
 
   setUp(() async {
     await TestKiwiUtil.init();
     localeRepo = TestKiwiUtil.resolveAs<LocaleRepo, MockLocaleRepoitory>();
-    debugRepo = TestKiwiUtil.resolveAs<DebugRepo, MockDebugRepository>();
+    debugRepo = TestKiwiUtil.resolveAs<DebugRepo, MockDebugrepositories>();
     sut = GlobalViewModel(localeRepo, debugRepo);
   });
 

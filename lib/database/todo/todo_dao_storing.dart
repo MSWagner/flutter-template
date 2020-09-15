@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:flutter_template/models/networking/todo.dart';
 
 abstract class TodoDaoStoring {
   Stream<List<DbTodo>> getAllTodosStream();

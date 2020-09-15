@@ -1,4 +1,4 @@
-import 'package:flutter_template/widget/todo/todo_row_item.dart';
+import 'package:flutter_template/features/todo/widgets/todo_row_item.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_kiwi_util.dart';

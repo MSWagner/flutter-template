@@ -1,4 +1,4 @@
-import 'package:flutter_template/widget/debug/selector_item.dart';
+import 'package:flutter_template/features/debug/widgets/selector_item.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_kiwi_util.dart';

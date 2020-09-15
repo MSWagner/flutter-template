@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/screen/home/home_screen.dart';
+import 'package:flutter_template/features/home/screens/home_screen.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_kiwi_util.dart';

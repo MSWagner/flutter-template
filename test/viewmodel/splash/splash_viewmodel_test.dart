@@ -1,5 +1,5 @@
-import 'package:flutter_template/repository/login/login_repo.dart';
-import 'package:flutter_template/viewmodel/splash/splash_viewmodel.dart';
+import 'package:flutter_template/features/login/repositories/login_repo.dart';
+import 'package:flutter_template/features/splash/viewmodels/splash_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -10,13 +10,13 @@ import '../../util/test_extensions.dart';
 
 void main() {
   SplashViewModel sut;
-  MockLoginRepository loginRepo;
+  MockLoginrepositories loginRepo;
   MockLocalStorage localStorage;
   SplashNavigator navigator;
 
   setUp(() async {
     await TestKiwiUtil.init();
-    loginRepo = TestKiwiUtil.resolveAs<LoginRepo, MockLoginRepository>();
+    loginRepo = TestKiwiUtil.resolveAs<LoginRepo, MockLoginrepositories>();
     navigator = MockSplashNavigator();
     localStorage = MockLocalStorage();
     sut = SplashViewModel(loginRepo, localStorage);

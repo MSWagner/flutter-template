@@ -1,4 +1,4 @@
-import 'package:flutter_template/widget/general/styled/flutter_template_back_button.dart';
+import 'package:flutter_template/common/widgets/styled/flutter_template_back_button.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../di/test_kiwi_util.dart';

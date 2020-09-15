@@ -5,18 +5,18 @@ import 'package:connectivity/connectivity.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_template/bridge/logging/logging_bridge.dart';
 import 'package:flutter_template/bridge/logging/logging_bridging.dart';
-import 'package:flutter_template/repository/debug/debug_repo.dart';
-import 'package:flutter_template/repository/locale/locale_repo.dart';
-import 'package:flutter_template/repository/login/login_repo.dart';
-import 'package:flutter_template/repository/login/login_repository.dart';
-import 'package:flutter_template/repository/refresh/refresh_repo.dart';
-import 'package:flutter_template/repository/refresh/refresh_repository.dart';
-import 'package:flutter_template/repository/shared_prefs/local/local_storage.dart';
-import 'package:flutter_template/repository/shared_prefs/local/local_storing.dart';
+import 'package:flutter_template/features/debug/repositories/debug_repo.dart';
+import 'package:flutter_template/repositories/locale/locale_repo.dart';
+import 'package:flutter_template/features/login/repositories/login_repo.dart';
+import 'package:flutter_template/features/login/repositories/login_repository.dart';
+import 'package:flutter_template/repositories/refresh/refresh_repo.dart';
+import 'package:flutter_template/repositories/refresh/refresh_repository.dart';
+import 'package:flutter_template/repositories/shared_prefs/local/local_storage.dart';
+import 'package:flutter_template/repositories/shared_prefs/local/local_storing.dart';
 import 'package:flutter_template/util/connectivity/connectivity_controller.dart';
 import 'package:flutter_template/util/connectivity/connectivity_controlling.dart';
-import 'package:flutter_template/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
-import 'package:flutter_template/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
+import 'package:flutter_template/features/todo/viewmodels/todo_add_viewmodel.dart';
+import 'package:flutter_template/features/todo/viewmodels/todo_list_viewmodel.dart';
 import 'package:kiwi/kiwi.dart';
 import 'package:moor/isolate.dart';
 import 'package:moor/moor.dart';
@@ -27,33 +27,33 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_template/database/todo/todo_dao_storage.dart';
 import 'package:flutter_template/database/todo/todo_dao_storing.dart';
 import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/repository/shared_prefs/shared_prefs_storage.dart';
-import 'package:flutter_template/repository/todo/todo_repo.dart';
-import 'package:flutter_template/repository/debug/debug_repository.dart';
-import 'package:flutter_template/repository/locale/locale_repository.dart';
-import 'package:flutter_template/repository/shared_prefs/shared_prefs_storing.dart';
-import 'package:flutter_template/repository/todo/todo_repository.dart';
+import 'package:flutter_template/repositories/shared_prefs/shared_prefs_storage.dart';
+import 'package:flutter_template/features/todo/repositories/todo_repo.dart';
+import 'package:flutter_template/features/debug/repositories/debug_repository.dart';
+import 'package:flutter_template/repositories/locale/locale_repository.dart';
+import 'package:flutter_template/repositories/shared_prefs/shared_prefs_storing.dart';
+import 'package:flutter_template/features/todo/repositories/todo_repository.dart';
 import 'package:flutter_template/util/logger/flutter_template_logger.dart';
 import 'package:flutter_template/util/env/flavor_config.dart';
 import 'package:flutter_template/util/interceptor/network_log_interceptor.dart';
-import 'package:flutter_template/viewmodel/license/license_viewmodel.dart';
-import 'package:flutter_template/viewmodel/debug/debug_platform_selector_viewmodel.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
-import 'package:flutter_template/viewmodel/splash/splash_viewmodel.dart';
+import 'package:flutter_template/features/license/viewmodels/license_viewmodel.dart';
+import 'package:flutter_template/features/debug/viewModels/debug_platform_selector_viewmodel.dart';
+import 'package:flutter_template/features/debug/viewModels/debug_viewmodel.dart';
+import 'package:flutter_template/common/viewmodels/global_viewmodel.dart';
+import 'package:flutter_template/features/splash/viewmodels/splash_viewmodel.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storage.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storing.dart';
-import 'package:flutter_template/repository/secure_storage/secure_storage.dart';
-import 'package:flutter_template/repository/secure_storage/secure_storing.dart';
+import 'package:flutter_template/repositories/secure_storage/auth/auth_storage.dart';
+import 'package:flutter_template/repositories/secure_storage/auth/auth_storing.dart';
+import 'package:flutter_template/repositories/secure_storage/secure_storage.dart';
+import 'package:flutter_template/repositories/secure_storage/secure_storing.dart';
 import 'package:flutter_template/util/interceptor/combining_smart_interceptor.dart';
 import 'package:flutter_template/util/interceptor/network_auth_interceptor.dart';
 import 'package:flutter_template/util/interceptor/network_error_interceptor.dart';
 import 'package:flutter_template/util/interceptor/network_refresh_interceptor.dart';
-import 'package:flutter_template/viewmodel/login/login_viewmodel.dart';
-import 'package:flutter_template/webservice/todo/todo_dummy_service.dart';
-import 'package:flutter_template/webservice/todo/todo_service.dart';
-import 'package:flutter_template/webservice/todo/todo_webservice.dart';
+import 'package:flutter_template/features/login/viewmodels/login_viewmodel.dart';
+import 'package:flutter_template/networking/todo/todo_dummy_service.dart';
+import 'package:flutter_template/networking/todo/todo_service.dart';
+import 'package:flutter_template/networking/todo/todo_webservice.dart';
 
 part 'injector.g.dart';
 
@@ -76,11 +76,11 @@ abstract class Injector {
   @Register.singleton(TodoService, from: TodoDummyService)
   void registerDummyServices();
 
-  @Register.singleton(TodoRepo, from: TodoRepository)
-  @Register.singleton(LoginRepo, from: LoginRepository)
-  @Register.singleton(RefreshRepo, from: RefreshRepository)
-  @Register.singleton(DebugRepo, from: DebugRepository)
-  @Register.singleton(LocaleRepo, from: LocaleRepository)
+  @Register.singleton(TodoRepo, from: Todorepositories)
+  @Register.singleton(LoginRepo, from: Loginrepositories)
+  @Register.singleton(RefreshRepo, from: Refreshrepositories)
+  @Register.singleton(DebugRepo, from: Debugrepositories)
+  @Register.singleton(LocaleRepo, from: Localerepositories)
   void registerRepositories();
 
   @Register.singleton(SharedPrefsStoring, from: SharedPrefsStorage)

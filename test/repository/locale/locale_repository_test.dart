@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_template/repository/locale/locale_repo.dart';
-import 'package:flutter_template/repository/locale/locale_repository.dart';
-import 'package:flutter_template/repository/shared_prefs/shared_prefs_storing.dart';
+import 'package:flutter_template/repositories/locale/locale_repo.dart';
+import 'package:flutter_template/repositories/locale/locale_repository.dart';
+import 'package:flutter_template/repositories/shared_prefs/shared_prefs_storing.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -16,7 +16,7 @@ void main() {
   setUp(() async {
     await TestKiwiUtil.init();
     shardPrefs = TestKiwiUtil.resolveAs<SharedPrefsStoring, MockSharedPrefsStorage>();
-    sut = LocaleRepository(shardPrefs);
+    sut = Localerepositories(shardPrefs);
   });
 
   group('setCustomLocale', () {

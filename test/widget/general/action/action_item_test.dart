@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/styles/theme_assets.dart';
 import 'package:flutter_template/styles/theme_data.dart';
-import 'package:flutter_template/widget/general/action/action_item.dart';
+import 'package:flutter_template/common/widgets/action/action_item.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../di/test_kiwi_util.dart';

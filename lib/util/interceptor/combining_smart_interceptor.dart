@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:dio/dio.dart';
-import 'package:flutter_template/model/exceptions/network_error.dart';
+import 'package:flutter_template/models/exceptions/network_error.dart';
 
 class CombiningSmartInterceptor implements Interceptor {
   final _interceptors = List<Interceptor>();

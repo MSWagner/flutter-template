@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:flutter_template/vendor/transparant_image.dart';
+import 'package:flutter_template/util/vendor/transparant_image.dart';
 import 'package:mockito/mockito.dart';
 
 R provideMockedNetworkImages<R>(R body(), {List<int> imageBytes = TransparantImageUtil.transparentImage}) {

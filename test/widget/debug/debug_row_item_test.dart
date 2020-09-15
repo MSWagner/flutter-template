@@ -1,4 +1,4 @@
-import 'package:flutter_template/widget/debug/debug_row_item.dart';
+import 'package:flutter_template/features/debug/widgets/debug_row_item.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_kiwi_util.dart';

@@ -1,5 +1,5 @@
-import 'package:flutter_template/repository/todo/todo_repo.dart';
-import 'package:flutter_template/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
+import 'package:flutter_template/features/todo/repositories/todo_repo.dart';
+import 'package:flutter_template/features/todo/viewmodels/todo_add_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -9,12 +9,12 @@ import '../../../util/test_extensions.dart';
 
 void main() {
   TodoAddViewModel sut;
-  MockTodoRepository todoRepo;
+  MockTodorepositories todoRepo;
   TodoAddNavigator navigator;
 
   setUp(() async {
     await TestKiwiUtil.init();
-    todoRepo = TestKiwiUtil.resolveAs<TodoRepo, MockTodoRepository>();
+    todoRepo = TestKiwiUtil.resolveAs<TodoRepo, MockTodorepositories>();
     navigator = MockTodoAddNavigator();
     sut = TodoAddViewModel(todoRepo);
   });

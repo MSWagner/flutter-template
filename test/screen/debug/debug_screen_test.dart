@@ -1,7 +1,7 @@
-import 'package:flutter_template/screen/debug/debug_screen.dart';
+import 'package:flutter_template/features/debug/screens/debug_screen.dart';
 import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
+import 'package:flutter_template/features/debug/viewModels/debug_viewmodel.dart';
+import 'package:flutter_template/common/viewmodels/global_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

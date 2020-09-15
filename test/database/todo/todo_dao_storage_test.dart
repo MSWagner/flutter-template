@@ -1,7 +1,7 @@
 import 'package:flutter_template/database/flutter_template_database.dart';
 import 'package:flutter_template/database/todo/todo_dao_storage.dart';
 import 'package:flutter_template/database/todo/todo_dao_storing.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:flutter_template/models/networking/todo.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_kiwi_util.dart';

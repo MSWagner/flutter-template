@@ -2,7 +2,7 @@
 #####                                TODO                                    #####
 ##################################################################################
 Todo:
-  path: webservice/todo/
+  path: networking/todo/
   properties:
     id:
       required: true

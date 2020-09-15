@@ -1,8 +1,8 @@
-import 'package:flutter_template/screen/todo/todo_list/todo_list_screen.dart';
+import 'package:flutter_template/features/todo/screens/todo_list_screen.dart';
 import 'package:flutter_template/util/keys.dart';
 import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
-import 'package:flutter_template/widget/todo/todo_row_item.dart';
+import 'package:flutter_template/features/todo/viewmodels/todo_list_viewmodel.dart';
+import 'package:flutter_template/features/todo/widgets/todo_row_item.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

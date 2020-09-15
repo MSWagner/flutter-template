@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/model/exceptions/internal_server_error.dart';
+import 'package:flutter_template/models/exceptions/internal_server_error.dart';
 import 'package:flutter_template/util/env/flavor_config.dart';
 import 'package:flutter_template/util/logger/flutter_template_logger.dart';
 import 'package:flutter_test/flutter_test.dart';

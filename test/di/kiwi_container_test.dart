@@ -1,5 +1,5 @@
 import 'package:kiwi/kiwi.dart';
-import 'package:flutter_template/repository/login/login_repo.dart';
+import 'package:flutter_template/features/login/repositories/login_repo.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../di/test_kiwi_util.dart';

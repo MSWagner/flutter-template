@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template/styles/theme_dimens.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_button.dart';
+import 'package:flutter_template/common/widgets/styled/flutter_template_button.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../di/test_kiwi_util.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/styles/theme_colors.dart';
 import 'package:flutter_template/util/env/flavor_config.dart';
-import 'package:flutter_template/widget/general/svg_icon.dart';
+import 'package:flutter_template/common/widgets/svg_icon.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_kiwi_util.dart';

@@ -23,11 +23,11 @@ class _$Injector extends Injector {
 
   void registerRepositories() {
     final KiwiContainer container = KiwiContainer();
-    container.registerSingleton<LoginRepo>((c) => MockLoginRepository());
-    container.registerSingleton<TodoRepo>((c) => MockTodoRepository());
-    container.registerSingleton<DebugRepo>((c) => MockDebugRepository());
+    container.registerSingleton<LoginRepo>((c) => MockLoginrepositories());
+    container.registerSingleton<TodoRepo>((c) => MockTodorepositories());
+    container.registerSingleton<DebugRepo>((c) => MockDebugrepositories());
     container.registerSingleton<LocaleRepo>((c) => MockLocaleRepoitory());
-    container.registerSingleton<RefreshRepo>((c) => MockRefreshRepository());
+    container.registerSingleton<RefreshRepo>((c) => MockRefreshrepositories());
   }
 
   void registerCommonDependencies() {

@@ -1,6 +1,6 @@
-import 'package:flutter_template/repository/login/login_repo.dart';
-import 'package:flutter_template/repository/login/login_repository.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storing.dart';
+import 'package:flutter_template/features/login/repositories/login_repo.dart';
+import 'package:flutter_template/features/login/repositories/login_repository.dart';
+import 'package:flutter_template/repositories/secure_storage/auth/auth_storing.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -15,7 +15,7 @@ void main() {
   setUp(() async {
     await TestKiwiUtil.init();
     authStorage = TestKiwiUtil.resolveAs<AuthStoring, MockAuthStorage>();
-    sut = LoginRepository(authStorage);
+    sut = Loginrepositories(authStorage);
   });
 
   group('isLoggedIn', () {

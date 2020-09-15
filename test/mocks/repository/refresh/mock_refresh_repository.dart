@@ -1,4 +1,4 @@
-import 'package:flutter_template/repository/refresh/refresh_repo.dart';
+import 'package:flutter_template/repositories/refresh/refresh_repo.dart';
 import 'package:mockito/mockito.dart';
 
-class MockRefreshRepository extends Mock implements RefreshRepo {}
+class MockRefreshrepositories extends Mock implements RefreshRepo {}

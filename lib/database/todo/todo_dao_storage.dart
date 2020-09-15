@@ -1,7 +1,7 @@
 import 'package:flutter_template/database/flutter_template_database.dart';
 import 'package:flutter_template/database/todo/todo_dao_storing.dart';
-import 'package:flutter_template/model/database/todo/db_todo_table.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:flutter_template/models/database/db_todo_table.dart';
+import 'package:flutter_template/models/networking/todo.dart';
 import 'package:moor/moor.dart';
 
 part 'todo_dao_storage.g.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter_template/database/todo/todo_dao_storing.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/repository/todo/todo_repo.dart';
-import 'package:flutter_template/repository/todo/todo_repository.dart';
-import 'package:flutter_template/webservice/todo/todo_service.dart';
+import 'package:flutter_template/models/networking/todo.dart';
+import 'package:flutter_template/features/todo/repositories/todo_repo.dart';
+import 'package:flutter_template/features/todo/repositories/todo_repository.dart';
+import 'package:flutter_template/networking/todo/todo_service.dart';
 import 'package:flutter_template/database/flutter_template_database.dart';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -22,7 +22,7 @@ void main() {
     await TestKiwiUtil.init();
     todoService = TestKiwiUtil.resolveAs<TodoService, MockTodoService>();
     todoDao = TestKiwiUtil.resolveAs<TodoDaoStoring, MockTodoDaoStorage>();
-    sut = TodoRepository(todoService, todoDao);
+    sut = Todorepositories(todoService, todoDao);
   });
 
   group('getTodos stream', () {

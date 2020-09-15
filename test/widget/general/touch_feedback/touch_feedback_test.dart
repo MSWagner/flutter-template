@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/styles/theme_data.dart';
-import 'package:flutter_template/widget/general/touch_feedback/touch_feedback.dart';
+import 'package:flutter_template/common/widgets/touch_feedback/touch_feedback.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../di/test_kiwi_util.dart';

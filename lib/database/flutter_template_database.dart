@@ -1,4 +1,4 @@
-import 'package:flutter_template/model/database/todo/db_todo_table.dart';
+import 'package:flutter_template/models/database/db_todo_table.dart';
 import 'package:moor/moor.dart';
 
 part 'flutter_template_database.g.dart';

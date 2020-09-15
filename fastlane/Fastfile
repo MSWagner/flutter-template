@@ -41,7 +41,7 @@ lane :pr do
 end
 
 lane :ci_staging do
-  ensure_git_status_clean # Make sure the repository is clean before starting with the staging deployment process.
+  ensure_git_status_clean # Make sure the repositories is clean before starting with the staging deployment process.
 
   ensureFlutterVersion # Make sure Flutter is using the right version to build this project
 
@@ -55,7 +55,7 @@ lane :ci_staging do
 end
 
 lane :staging_android do
-  ensure_git_status_clean # Make sure the repository is clean before starting with the staging deployment process.
+  ensure_git_status_clean # Make sure the repositories is clean before starting with the staging deployment process.
 
   ensureFlutterVersion # Make sure Flutter is using the right version to build this project
 
@@ -65,7 +65,7 @@ lane :staging_android do
 end
 
 lane :prod_android do
-  ensure_git_status_clean # Make sure the repository is clean before starting with the beta deployment process.
+  ensure_git_status_clean # Make sure the repositories is clean before starting with the beta deployment process.
 
   ensureFlutterVersion # Make sure Flutter is using the right version to build this project
 
@@ -75,7 +75,7 @@ lane :prod_android do
 end
 
 lane :staging_ios do
-  ensure_git_status_clean # Make sure the repository is clean before starting with the staging deployment process.
+  ensure_git_status_clean # Make sure the repositories is clean before starting with the staging deployment process.
 
   ensureFlutterVersion # Make sure Flutter is using the right version to build this project
 
@@ -85,7 +85,7 @@ lane :staging_ios do
 end
 
 lane :prod_ios do
-  ensure_git_status_clean # Make sure the repository is clean before starting with the beta deployment process.
+  ensure_git_status_clean # Make sure the repositories is clean before starting with the beta deployment process.
 
   ensureFlutterVersion # Make sure Flutter is using the right version to build this project
 

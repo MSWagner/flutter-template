@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/model/exceptions/bad_request_error.dart';
-import 'package:flutter_template/model/exceptions/code_error.dart';
-import 'package:flutter_template/model/exceptions/forbidden_error.dart';
-import 'package:flutter_template/model/exceptions/general_error.dart';
-import 'package:flutter_template/model/exceptions/internal_server_error.dart';
-import 'package:flutter_template/model/exceptions/no_internet_error.dart';
-import 'package:flutter_template/model/exceptions/un_authorized_error.dart';
+import 'package:flutter_template/models/exceptions/bad_request_error.dart';
+import 'package:flutter_template/models/exceptions/code_error.dart';
+import 'package:flutter_template/models/exceptions/forbidden_error.dart';
+import 'package:flutter_template/models/exceptions/general_error.dart';
+import 'package:flutter_template/models/exceptions/internal_server_error.dart';
+import 'package:flutter_template/models/exceptions/no_internet_error.dart';
+import 'package:flutter_template/models/exceptions/un_authorized_error.dart';
 import 'package:flutter_template/util/connectivity/connectivity_controlling.dart';
 
 class NetworkErrorInterceptor extends Interceptor {

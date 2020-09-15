@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/model/exceptions/flutter_template_error.dart';
-import 'package:flutter_template/model/exceptions/general_network_error.dart';
-import 'package:flutter_template/model/exceptions/un_authorized_error.dart';
-import 'package:flutter_template/repository/refresh/refresh_repo.dart';
-import 'package:flutter_template/repository/refresh/refresh_repository.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storing.dart';
+import 'package:flutter_template/models/exceptions/flutter_template_error.dart';
+import 'package:flutter_template/models/exceptions/general_network_error.dart';
+import 'package:flutter_template/models/exceptions/un_authorized_error.dart';
+import 'package:flutter_template/repositories/refresh/refresh_repo.dart';
+import 'package:flutter_template/repositories/refresh/refresh_repository.dart';
+import 'package:flutter_template/repositories/secure_storage/auth/auth_storing.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -20,7 +20,7 @@ void main() {
   setUp(() async {
     await TestKiwiUtil.init();
     authStorage = TestKiwiUtil.resolveAs<AuthStoring, MockAuthStorage>();
-    sut = RefreshRepository(authStorage);
+    sut = Refreshrepositories(authStorage);
   });
 
   group('refresh', () {

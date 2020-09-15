@@ -42,15 +42,15 @@ class _$Injector extends Injector {
   void registerRepositories() {
     final KiwiContainer container = KiwiContainer();
     container.registerSingleton<TodoRepo>(
-        (c) => TodoRepository(c<TodoService>(), c<TodoDaoStoring>()));
+        (c) => Todorepositories(c<TodoService>(), c<TodoDaoStoring>()));
     container
-        .registerSingleton<LoginRepo>((c) => LoginRepository(c<AuthStoring>()));
+        .registerSingleton<LoginRepo>((c) => Loginrepositories(c<AuthStoring>()));
     container.registerSingleton<RefreshRepo>(
-        (c) => RefreshRepository(c<AuthStoring>()));
+        (c) => Refreshrepositories(c<AuthStoring>()));
     container.registerSingleton<DebugRepo>(
-        (c) => DebugRepository(c<SharedPrefsStoring>()));
+        (c) => Debugrepositories(c<SharedPrefsStoring>()));
     container.registerSingleton<LocaleRepo>(
-        (c) => LocaleRepository(c<SharedPrefsStoring>()));
+        (c) => Localerepositories(c<SharedPrefsStoring>()));
   }
 
   void registerCommonDependencies() {

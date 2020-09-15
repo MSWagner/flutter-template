@@ -1,5 +1,5 @@
 import 'package:flutter_template/styles/theme_text_styles.dart';
-import 'package:flutter_template/widget/general/action/text_action_item.dart';
+import 'package:flutter_template/common/widgets/action/text_action_item.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../di/test_kiwi_util.dart';

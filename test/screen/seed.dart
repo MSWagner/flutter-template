@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:flutter_template/models/networking/todo.dart';
 import 'package:flutter_template/util/license.dart';
 import 'package:flutter_template/util/locale/localization_delegate.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
-import 'package:flutter_template/viewmodel/license/license_viewmodel.dart';
-import 'package:flutter_template/viewmodel/login/login_viewmodel.dart';
-import 'package:flutter_template/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
-import 'package:flutter_template/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
+import 'package:flutter_template/features/debug/viewModels/debug_viewmodel.dart';
+import 'package:flutter_template/common/viewmodels/global_viewmodel.dart';
+import 'package:flutter_template/features/license/viewmodels/license_viewmodel.dart';
+import 'package:flutter_template/features/login/viewmodels/login_viewmodel.dart';
+import 'package:flutter_template/features/todo/viewmodels/todo_add_viewmodel.dart';
+import 'package:flutter_template/features/todo/viewmodels/todo_list_viewmodel.dart';
 import 'package:mockito/mockito.dart';
 
 import '../di/test_kiwi_util.dart';

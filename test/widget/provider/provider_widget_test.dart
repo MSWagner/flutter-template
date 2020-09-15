@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/widget/provider/provider_widget.dart';
+import 'package:flutter_template/common/widgets/provider/provider_widget.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_kiwi_util.dart';

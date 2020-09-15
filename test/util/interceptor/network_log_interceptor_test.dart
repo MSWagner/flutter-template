@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/model/exceptions/internal_server_error.dart';
+import 'package:flutter_template/models/exceptions/internal_server_error.dart';
 import 'package:flutter_template/util/interceptor/network_log_interceptor.dart';
 import 'package:flutter_test/flutter_test.dart';
 

@@ -1,5 +1,5 @@
-import 'package:flutter_template/repository/debug/debug_repo.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
+import 'package:flutter_template/features/debug/repositories/debug_repo.dart';
+import 'package:flutter_template/features/debug/viewModels/debug_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -10,12 +10,12 @@ import '../../util/test_extensions.dart';
 void main() {
   DebugViewModel sut;
   DebugNavigator navigator;
-  MockDebugRepository debugRepo;
+  MockDebugrepositories debugRepo;
 
   setUp(() async {
     await TestKiwiUtil.init();
     navigator = MockDebugNavigator();
-    debugRepo = TestKiwiUtil.resolveAs<DebugRepo, MockDebugRepository>();
+    debugRepo = TestKiwiUtil.resolveAs<DebugRepo, MockDebugrepositories>();
     sut = DebugViewModel(debugRepo);
   });
 

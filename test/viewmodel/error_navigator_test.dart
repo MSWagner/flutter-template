@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_template/styles/theme_colors.dart';
 import 'package:flutter_template/styles/theme_text_styles.dart';
 import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/error_navigator.dart';
+import 'package:flutter_template/navigation/navigators/error_navigator.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../di/test_kiwi_util.dart';

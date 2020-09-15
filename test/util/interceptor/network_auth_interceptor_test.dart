@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storing.dart';
+import 'package:flutter_template/repositories/secure_storage/auth/auth_storing.dart';
 import 'package:flutter_template/util/interceptor/network_auth_interceptor.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';

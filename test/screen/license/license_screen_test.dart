@@ -1,6 +1,6 @@
-import 'package:flutter_template/screen/license/license_screen.dart';
+import 'package:flutter_template/features/license/screens/license_screen.dart';
 import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/viewmodel/license/license_viewmodel.dart';
+import 'package:flutter_template/features/license/viewmodels/license_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

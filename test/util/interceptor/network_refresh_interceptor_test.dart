@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/model/exceptions/un_authorized_error.dart';
-import 'package:flutter_template/repository/refresh/refresh_repo.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storing.dart';
+import 'package:flutter_template/models/exceptions/un_authorized_error.dart';
+import 'package:flutter_template/repositories/refresh/refresh_repo.dart';
+import 'package:flutter_template/repositories/secure_storage/auth/auth_storing.dart';
 import 'package:flutter_template/util/interceptor/network_refresh_interceptor.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -15,12 +15,12 @@ import '../../util/test_extensions.dart';
 void main() {
   NetworkRefreshInterceptor sut;
   MockAuthStorage authStorage;
-  MockRefreshRepository refreshRepo;
+  MockRefreshrepositories refreshRepo;
   MockDio dio;
   setUp(() async {
     await TestKiwiUtil.init();
     authStorage = TestKiwiUtil.resolveAs<AuthStoring, MockAuthStorage>();
-    refreshRepo = TestKiwiUtil.resolveAs<RefreshRepo, MockRefreshRepository>();
+    refreshRepo = TestKiwiUtil.resolveAs<RefreshRepo, MockRefreshrepositories>();
     dio = TestKiwiUtil.resolveAs<Dio, MockDio>();
     sut = NetworkRefreshInterceptor(authStorage, refreshRepo);
   });

@@ -34,28 +34,6 @@ void main() {
 
     FlavorConfig(
       color: Colors.amber,
-      name: 'ALPHA',
-      flavor: Flavor.ALPHA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isAlpha(), true);
-    FlutterTemplateLogger.logDebug('isAlpha');
-    expect(output, null);
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'BETA',
-      flavor: Flavor.BETA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isBeta(), true);
-    FlutterTemplateLogger.logDebug('isBeta');
-    expect(output, null);
-
-    FlavorConfig(
-      color: Colors.amber,
       name: 'TEST',
       flavor: Flavor.TEST,
       values: null,
@@ -104,28 +82,6 @@ void main() {
 
     FlavorConfig(
       color: Colors.amber,
-      name: 'ALPHA',
-      flavor: Flavor.ALPHA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isAlpha(), true);
-    FlutterTemplateLogger.logVerbose('isAlpha');
-    expect(output, null);
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'BETA',
-      flavor: Flavor.BETA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isBeta(), true);
-    FlutterTemplateLogger.logVerbose('isBeta');
-    expect(output, null);
-
-    FlavorConfig(
-      color: Colors.amber,
       name: 'TEST',
       flavor: Flavor.TEST,
       values: null,
@@ -161,28 +117,6 @@ void main() {
     expect(FlavorConfig.isDev(), true);
     FlutterTemplateLogger.logInfo('isDev');
     expect(output, '💡️ isDev');
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'ALPHA',
-      flavor: Flavor.ALPHA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isAlpha(), true);
-    FlutterTemplateLogger.logInfo('isAlpha');
-    expect(output, null);
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'BETA',
-      flavor: Flavor.BETA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isBeta(), true);
-    FlutterTemplateLogger.logInfo('isBeta');
-    expect(output, null);
 
     FlavorConfig(
       color: Colors.amber,
@@ -232,28 +166,6 @@ void main() {
     expect(FlavorConfig.isDev(), true);
     FlutterTemplateLogger.logWarning('isDev');
     expect(output, '⚠️ isDev');
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'ALPHA',
-      flavor: Flavor.ALPHA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isAlpha(), true);
-    FlutterTemplateLogger.logWarning('isAlpha');
-    expect(output, null);
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'BETA',
-      flavor: Flavor.BETA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isBeta(), true);
-    FlutterTemplateLogger.logWarning('isBeta');
-    expect(output, null);
 
     FlavorConfig(
       color: Colors.amber,
@@ -323,32 +235,6 @@ void main() {
       // ignore: avoid_as
       expect(output, '---⛔ ERROR ⛔---\nisDev\n$e\n${(e as Error).stackTrace}\n-----------------\n');
     }
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'ALPHA',
-      flavor: Flavor.ALPHA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isAlpha(), true);
-    FlutterTemplateLogger.logError(message: 'isAlpha', error: null);
-    expect(output, null);
-    FlutterTemplateLogger.logError(message: 'isAlpha', error: Error());
-    expect(output, null);
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'BETA',
-      flavor: Flavor.BETA,
-      values: null,
-    );
-    output = null;
-    expect(FlavorConfig.isBeta(), true);
-    FlutterTemplateLogger.logError(message: 'isBeta', error: null);
-    expect(output, null);
-    FlutterTemplateLogger.logError(message: 'isBeta', error: Error());
-    expect(output, null);
 
     FlavorConfig(
       color: Colors.amber,

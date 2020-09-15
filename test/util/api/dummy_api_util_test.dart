@@ -70,35 +70,6 @@ void main() {
     }, throwsArgumentError);
   });
 
-  test('Dummy api util test get response while ALPHA', () async {
-    TestWidgetsFlutterBinding.ensureInitialized();
-
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'ALPHA',
-      flavor: Flavor.ALPHA,
-      values: null,
-    );
-    expect(FlavorConfig.isAlpha(), true);
-    expect(() async {
-      await DummyApiUtil.getResponse<List<dynamic>>('todos');
-    }, throwsArgumentError);
-  });
-
-  test('Dummy api util test get response while BETA', () async {
-    TestWidgetsFlutterBinding.ensureInitialized();
-    FlavorConfig(
-      color: Colors.amber,
-      name: 'BETA',
-      flavor: Flavor.BETA,
-      values: null,
-    );
-    expect(FlavorConfig.isBeta(), true);
-    expect(() async {
-      await DummyApiUtil.getResponse<List<dynamic>>('todos');
-    }, throwsArgumentError);
-  });
-
   test('Dummy api util test get response while STAGING', () async {
     TestWidgetsFlutterBinding.ensureInitialized();
     FlavorConfig(

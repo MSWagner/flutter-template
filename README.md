@@ -59,20 +59,6 @@ flutter run --flavor dev -t lib/main.dart
 flutter run --release --flavor dev -t lib/main.dart
 ```
 
-### Alpha
-```
-flutter run --flavor alpha -t lib/main_alpha.dart
-
-flutter run --release --flavor alpha -t lib/main_alpha.dart
-```
-
-### Beta
-```
-flutter run --flavor beta -t lib/main_beta.dart
-
-flutter run --release --flavor beta -t lib/main_beta.dart
-```
-
 ### Staging
 ```
 flutter run --flavor staging -t lib/main_staging.dart
@@ -138,8 +124,7 @@ private_lane :convertAppToIpa do |options|
                 method: "enterprise",
                 provisioningProfiles: {
                     "com.icapps.fluttertemplate.dev" => "Flutter Template Debug", //TODO edit this
-                    "com.icapps.fluttertemplate.alpha" => "Flutter Template Alpha", //TODO edit this
-                    "com.icapps.fluttertemplate.beta" => "Flutter Template Beta", //TODO edit this
+                    "com.icapps.fluttertemplate.staging" => "Flutter Template Staging", //TODO edit this
                     "com.icapps.fluttertemplate" => "Flutter Template Production" //TODO edit this
                 }
             }
@@ -173,8 +158,7 @@ update folder structure with matching packagename
 
 ```
 android/app/src/debug/value/string.xml
-android/app/src/alpha/value/string.xml
-android/app/src/beta/value/string.xml
+android/app/src/staging/value/string.xml
 android/app/src/prod/value/string.xml
 ```
 

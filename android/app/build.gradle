@@ -60,16 +60,6 @@ android {
       applicationIdSuffix ".debug"
       versionNameSuffix "-debug"
     }
-    alpha {
-      dimension "flavors"
-      applicationIdSuffix ".alpha"
-      versionNameSuffix "-alpha"
-    }
-    beta {
-      dimension "flavors"
-      applicationIdSuffix ".beta"
-      versionNameSuffix "-beta"
-    }
     staging {
         dimension "flavors"
         applicationIdSuffix ".staging"

@@ -7,8 +7,6 @@ enum Flavor {
   TEST,
   DUMMY,
   DEV, //We use DEV instead of DEBUG because android already has a release type Debug.
-  ALPHA,
-  BETA,
   STAGING,
   PROD,
 }
@@ -44,10 +42,6 @@ class FlavorConfig {
   static bool isStaging() => _instance.flavor == Flavor.STAGING;
 
   static bool isDev() => _instance.flavor == Flavor.DEV;
-
-  static bool isAlpha() => _instance.flavor == Flavor.ALPHA;
-
-  static bool isBeta() => _instance.flavor == Flavor.BETA;
 
   static bool isInTest() => _instance.flavor == Flavor.TEST;
 

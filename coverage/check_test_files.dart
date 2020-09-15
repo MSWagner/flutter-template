@@ -87,8 +87,6 @@ List<File> getFiles(Directory directory) {
 const excludedFiles = [
   // Entry points
   'main.dart',
-  'main_alpha.dart',
-  'main_beta.dart',
   'main_dummy.dart',
   'main_staging.dart',
   'main_prod.dart',

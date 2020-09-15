@@ -38,14 +38,6 @@ void main() {
       expect(FlavorConfig.isStaging(), false);
     });
 
-    test('FlavorConfig is not in alpha', () {
-      expect(FlavorConfig.isAlpha(), false);
-    });
-
-    test('FlavorConfig is not in beta', () {
-      expect(FlavorConfig.isBeta(), false);
-    });
-
     test('FlavorConfig is not in test', () {
       expect(FlavorConfig.isInTest(), true);
     });

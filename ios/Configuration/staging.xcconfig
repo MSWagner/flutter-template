@@ -1,0 +1,6 @@
+#include "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include "Shared.xcconfig"
+PRODUCT_BUNDLE_IDENTIFIER=com.icapps.fluttertemplate.staging
+CFBundleName=Flutter Template Staging
+FLUTTER_TARGET=lib/main_staging.dart
+PROVISIONING_PROFILE_SPECIFIER=Flutter Template Staging

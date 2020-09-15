@@ -98,4 +98,18 @@ void main() {
       await DummyApiUtil.getResponse<List<dynamic>>('todos');
     }, throwsArgumentError);
   });
+
+  test('Dummy api util test get response while STAGING', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    FlavorConfig(
+      color: Colors.amber,
+      name: 'STAGING',
+      flavor: Flavor.STAGING,
+      values: null,
+    );
+    expect(FlavorConfig.isStaging(), true);
+    expect(() async {
+      await DummyApiUtil.getResponse<List<dynamic>>('todos');
+    }, throwsArgumentError);
+  });
 }

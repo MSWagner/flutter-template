@@ -23,6 +23,17 @@ void main() {
 
     FlavorConfig(
       color: Colors.amber,
+      name: 'STAGING',
+      flavor: Flavor.STAGING,
+      values: null,
+    );
+    output = null;
+    expect(FlavorConfig.isStaging(), true);
+    FlutterTemplateLogger.logDebug('isStaging');
+    expect(output, null);
+
+    FlavorConfig(
+      color: Colors.amber,
       name: 'ALPHA',
       flavor: Flavor.ALPHA,
       values: null,
@@ -79,6 +90,17 @@ void main() {
     );
     expect(FlavorConfig.isDev(), true);
     FlutterTemplateLogger.logVerbose('isDev');
+
+    FlavorConfig(
+      color: Colors.amber,
+      name: 'STAGING',
+      flavor: Flavor.STAGING,
+      values: null,
+    );
+    output = null;
+    expect(FlavorConfig.isStaging(), true);
+    FlutterTemplateLogger.logVerbose('isStaging');
+    expect(output, null);
 
     FlavorConfig(
       color: Colors.amber,
@@ -175,6 +197,17 @@ void main() {
 
     FlavorConfig(
       color: Colors.amber,
+      name: 'STAGING',
+      flavor: Flavor.STAGING,
+      values: null,
+    );
+    output = null;
+    expect(FlavorConfig.isStaging(), true);
+    FlutterTemplateLogger.logInfo('isStaging');
+    expect(output, null);
+
+    FlavorConfig(
+      color: Colors.amber,
       name: 'PRODUCTION',
       flavor: Flavor.PROD,
       values: null,
@@ -231,6 +264,17 @@ void main() {
     output = null;
     expect(FlavorConfig.isInTest(), true);
     FlutterTemplateLogger.logWarning('isTest');
+    expect(output, null);
+
+    FlavorConfig(
+      color: Colors.amber,
+      name: 'STAGING',
+      flavor: Flavor.STAGING,
+      values: null,
+    );
+    output = null;
+    expect(FlavorConfig.isStaging(), true);
+    FlutterTemplateLogger.logWarning('isStaging');
     expect(output, null);
 
     FlavorConfig(
@@ -317,6 +361,19 @@ void main() {
     FlutterTemplateLogger.logError(message: 'isTest', error: null);
     expect(output, null);
     FlutterTemplateLogger.logError(message: 'isTest', error: Error());
+    expect(output, null);
+
+    FlavorConfig(
+      color: Colors.amber,
+      name: 'STAGING',
+      flavor: Flavor.STAGING,
+      values: null,
+    );
+    output = null;
+    expect(FlavorConfig.isStaging(), true);
+    FlutterTemplateLogger.logError(message: 'isStaging', error: null);
+    expect(output, null);
+    FlutterTemplateLogger.logError(message: 'isStaging', error: Error());
     expect(output, null);
 
     FlavorConfig(

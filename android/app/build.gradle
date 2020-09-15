@@ -70,6 +70,11 @@ android {
       applicationIdSuffix ".beta"
       versionNameSuffix "-beta"
     }
+    staging {
+        dimension "flavors"
+        applicationIdSuffix ".staging"
+        versionNameSuffix "-staging"
+    }
     prod {
       dimension "flavors"
     }

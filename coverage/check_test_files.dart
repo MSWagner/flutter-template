@@ -90,6 +90,7 @@ const excludedFiles = [
   'main_alpha.dart',
   'main_beta.dart',
   'main_dummy.dart',
+  'main_staging.dart',
   'main_prod.dart',
   // App
   'app.dart',

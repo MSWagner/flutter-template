@@ -68,6 +68,20 @@ lane :ci_beta do
   upload_to_appcenter_ios(flavor: 'beta') # Deploy the apk to AppCenter.
 end
 
+lane :ci_staging do
+  ensure_git_status_clean # Make sure the repository is clean before starting with the staging deployment process.
+
+  ensureFlutterVersion # Make sure Flutter is using the right version to build this project
+
+  prepareBuild()
+
+  buildAppAndroid(flavor: 'staging')
+  upload_to_appcenter_android(flavor: 'staging') # Deploy the apk to AppCenter.
+
+  buildAppIOS(flavor: 'staging')
+  upload_to_appcenter_ios(flavor: 'staging') # Deploy the apk to AppCenter.
+end
+
 lane :alpha_android do
   ensure_git_status_clean # Make sure the repository is clean before starting with the beta deployment process.
 
@@ -86,6 +100,16 @@ lane :beta_android do
   prepareBuild()
   buildAppAndroid(flavor: 'beta')
   upload_to_appcenter_android(flavor: 'beta') # Deploy the apk to AppCenter.
+end
+
+lane :staging_android do
+  ensure_git_status_clean # Make sure the repository is clean before starting with the staging deployment process.
+
+  ensureFlutterVersion # Make sure Flutter is using the right version to build this project
+
+  prepareBuild()
+  buildAppAndroid(flavor: 'staging')
+  upload_to_appcenter_android(flavor: 'staging') # Deploy the apk to AppCenter.
 end
 
 lane :prod_android do
@@ -116,6 +140,16 @@ lane :beta_ios do
   prepareBuild()
   buildAppIOS(flavor: 'beta')
   upload_to_appcenter_ios(flavor: 'beta') # Deploy the apk to AppCenter.
+end
+
+lane :staging_ios do
+  ensure_git_status_clean # Make sure the repository is clean before starting with the staging deployment process.
+
+  ensureFlutterVersion # Make sure Flutter is using the right version to build this project
+
+  prepareBuild()
+  buildAppIOS(flavor: 'staging')
+  upload_to_appcenter_ios(flavor: 'staging') # Deploy the apk to AppCenter.
 end
 
 lane :prod_ios do
@@ -172,6 +206,7 @@ private_lane :convertAppToIpa do |options|
                     "com.icapps.fluttertemplate.dev" => "Flutter Template Debug",
                     "com.icapps.fluttertemplate.alpha" => "Flutter Template Alpha",
                     "com.icapps.fluttertemplate.beta" => "Flutter Template Beta",
+                    "com.icapps.fluttertemplate.staging" => "Flutter Template Staging",
                     "com.icapps.fluttertemplate" => "Flutter Template Production"
                 }
             }
@@ -206,6 +241,8 @@ private_lane :getAppNameAndroid do |options|
         appcenter_app_name = "Flutter-Template-Android-Alpha"
     elsif flavor == "beta"
         appcenter_app_name = "Flutter-Template-Android-Beta"
+    elsif flavor == "staging"
+        appcenter_app_name = "Flutter-Template-Android-Staging"
     elsif flavor == "prod"
         appcenter_app_name = "Flutter-Template-Android"
     end
@@ -218,6 +255,8 @@ private_lane :getAppNameIOS do |options|
         appcenter_app_name = "Flutter-Template-iOS-Alpha"
     elsif flavor == "beta"
         appcenter_app_name = "Flutter-Template-iOS-Beta"
+    elsif flavor == "staging"
+        appcenter_app_name = "Flutter-Template-iOS-Staging"
     elsif flavor == "prod"
         appcenter_app_name = "Flutter-Template-iOS"
     end

@@ -34,6 +34,10 @@ void main() {
       expect(FlavorConfig.isProd(), false);
     });
 
+    test('FlavorConfig is not in staging', () {
+      expect(FlavorConfig.isStaging(), false);
+    });
+
     test('FlavorConfig is not in alpha', () {
       expect(FlavorConfig.isAlpha(), false);
     });

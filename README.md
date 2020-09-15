@@ -73,6 +73,13 @@ flutter run --flavor beta -t lib/main_beta.dart
 flutter run --release --flavor beta -t lib/main_beta.dart
 ```
 
+### Staging
+```
+flutter run --flavor staging -t lib/main_staging.dart
+
+flutter run --release --flavor staging -t lib/main_staging.dart
+```
+
 ### Prod, Release
 ```
 flutter run --flavor prod -t lib/main_prod.dart

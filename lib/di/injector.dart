@@ -6,6 +6,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter_template/bridge/logging/logging_bridge.dart';
 import 'package:flutter_template/bridge/logging/logging_bridging.dart';
 import 'package:flutter_template/features/debug/repositories/debug_repo.dart';
+import 'package:flutter_template/features/debug/viewmodels/debug_viewmodel.dart';
+import 'package:flutter_template/features/debug/viewmodels/debug_platform_selector_viewmodel.dart';
 import 'package:flutter_template/repositories/locale/locale_repo.dart';
 import 'package:flutter_template/features/login/repositories/login_repo.dart';
 import 'package:flutter_template/features/login/repositories/login_repository.dart';

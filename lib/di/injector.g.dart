@@ -43,8 +43,8 @@ class _$Injector extends Injector {
     final KiwiContainer container = KiwiContainer();
     container.registerSingleton<TodoRepo>(
         (c) => Todorepositories(c<TodoService>(), c<TodoDaoStoring>()));
-    container
-        .registerSingleton<LoginRepo>((c) => Loginrepositories(c<AuthStoring>()));
+    container.registerSingleton<LoginRepo>(
+        (c) => Loginrepositories(c<AuthStoring>()));
     container.registerSingleton<RefreshRepo>(
         (c) => Refreshrepositories(c<AuthStoring>()));
     container.registerSingleton<DebugRepo>(

@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter_template/database/flutter_template_database.dart';
 import 'package:flutter_template/database/todo/todo_dao_storing.dart';
 import 'package:flutter_template/features/debug/repositories/debug_repo.dart';
+import 'package:flutter_template/features/debug/viewmodels/debug_viewmodel.dart';
+import 'package:flutter_template/features/debug/viewmodels/debug_platform_selector_viewmodel.dart';
 import 'package:flutter_template/repositories/locale/locale_repo.dart';
 import 'package:flutter_template/features/login/repositories/login_repo.dart';
 import 'package:flutter_template/repositories/refresh/refresh_repo.dart';
@@ -11,8 +13,6 @@ import 'package:flutter_template/repositories/shared_prefs/local/local_storing.d
 import 'package:flutter_template/repositories/shared_prefs/shared_prefs_storing.dart';
 import 'package:flutter_template/features/todo/repositories/todo_repo.dart';
 import 'package:flutter_template/util/connectivity/connectivity_controlling.dart';
-import 'package:flutter_template/features/debug/viewModels/debug_platform_selector_viewmodel.dart';
-import 'package:flutter_template/features/debug/viewModels/debug_viewmodel.dart';
 import 'package:flutter_template/common/viewmodels/global_viewmodel.dart';
 import 'package:flutter_template/features/license/viewmodels/license_viewmodel.dart';
 import 'package:flutter_template/features/login/viewmodels/login_viewmodel.dart';
